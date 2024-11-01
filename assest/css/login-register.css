@@ -1,0 +1,61 @@
+.login-register{
+    margin: 56px 70px 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    h5{
+        margin-bottom: 30px;
+    }
+    .login{
+        max-height: 406px;
+    }
+    .log-reg{
+        width: 100%;
+        min-width: 549px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid #EAEAEA;
+        .coordinat-info{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .eye-log, .eye-reg{
+            position: relative;
+        }
+        .eye{
+            width: 22px;
+            height: 15px;
+            color: #9D9D9D;
+            cursor: pointer;
+            position: absolute;
+        }
+        .eye1{
+            top: 84px;
+            right: 16px;
+        }
+        .eye2{
+                top: 152px;
+                right: 16px;
+        }
+        .eye3{
+            top: 220px;
+            right: 16px;
+        }
+        .login-btn{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width : 992px){
+    .login-register{
+        margin: 56px 20px 70px;
+        flex-direction: column;
+        .log-reg{
+            min-width: 0;
+        }
+    }
+}

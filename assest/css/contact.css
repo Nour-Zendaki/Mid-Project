@@ -1,0 +1,108 @@
+.map{
+    margin: 56px 70px 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    .per-info{
+        max-width: 410px;
+        h1{
+            margin-bottom: 24px;
+            font-size: 36px;
+            font-weight: 600px;
+        }
+        .phone{
+            margin: 17px 0;
+        }
+        .coordination-info{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            .per-info-icon{
+                width: 56px;
+                height: 56px;
+                background-color: #F5F5F5;
+                border-radius: 8px;
+                text-align: center;
+                svg, i{
+                    padding-top: 20px;
+                }
+            }
+            .details-info{
+                p{
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+    iframe{
+        width: 100%;
+        max-height: 390px;
+    }
+}
+
+.details-info{
+    h5{
+        font-weight: 600;
+    }
+}
+
+.contact{
+    margin: 0 70px 70px;
+    .note{
+        margin: 20px 0 30px;
+    }
+    .coordination-input{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        .input-info{
+            width: 603px;
+            width: 100vw;
+            margin-bottom: 20px;
+        }
+    }
+    textarea{
+        width: 100%;
+        padding: 10px 16px;
+        border-radius: 8px;
+        border: 1px solid #9D9D9D;
+    }
+    .check{
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width : 992px){
+    .map{
+        margin: 0;
+        flex-direction: column;
+        .per-info{
+            max-width: 320px;
+            margin: 56px 20px 0;
+        }
+        iframe{
+            min-width: 0;
+            max-height: 357px;
+            border-radius: 0;
+        }
+    }
+    .contact{
+        margin: 70px 20px;
+        .coordination-input{
+            flex-direction: column;
+            margin-bottom: 20px;
+            .input-info{
+                width: 100%;
+                max-width: 320px;
+                margin-bottom: 0;
+            }
+        }
+        .check{
+            label{
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+

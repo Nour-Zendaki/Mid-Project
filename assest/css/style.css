@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo", sans-serif;
+}
+
+nav {
+    height: 72px;
+    padding: 0 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul{
+        width: 512px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+    .list{
+        padding: 26.5px 19px;
+        font-weight: 600;
+    }
+    .list:active, svg:active{
+        background-color: #F5F5F5;
+        color: #FF782D;
+    }
+    .page {
+        svg, i{
+            padding-left: 8px;
+        }
+    }
+    .login{
+        display: flex;
+        align-items: center;
+    }
+    .menu {
+        background: none;
+        border: none;
+        font-size:larger;
+        display: none;
+        .icon{
+            color: #000000;
+        }
+    }
+}
+
+.intro {
+    height: 77px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.text {
+    font-size: 18px;
+}
+
+.color {
+    color: #555555;
+}
+.font-fam{
+    font-family: "Jost", serif;
+}
+
+.font{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.btn {
+    width: 170px;
+    height: 48px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-color {
+    background-color: #FF782D;
+    color: #FFFFFF;
+}
+
+.radius{
+    border-radius: 20px;
+}
+
+.icon {
+    color: #FF782D;
+}
+
+.fit-img{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.coordination-a{
+    text-decoration: none;
+    color: black;
+}
+
+.card{
+    max-width: 385px;
+    border: 1px solid #EAEAEA;
+    position: relative;
+    .describtion {
+        max-width: 345px;
+        margin: 20px;
+        p{
+            font-weight: 500;
+        }
+        h4{
+            margin: 12px 0 16px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .details{
+            width: 214px;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 16px;
+            .lining{
+                display: flex;
+                justify-content: space-between;
+                p{
+                    margin-left: 8px;
+                }
+            }
+        }
+        .price {
+            border-top: 1px solid #EAEAEA;
+            .view{
+                padding-top: 16px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 18px;
+                span{
+                    color: #9D9D9D;
+                    margin-right: 8px;
+                }
+                p{
+                    color: #55BE24;
+                    font-weight: 500;
+                }
+                a{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+/* header ارشاد بأي صفحة نحنا موجودين ضمن ال */
+header .guide{
+    background-color: #F5F5F5;
+    padding: 18px 70px;
+    p{
+        font-family: "Jost", serif;
+    span{
+        color: #9D9D9D;
+        font-family: "Jost", serif;
+        svg, .space{
+            padding: 0 8px;
+        }
+    }
+    }
+}
+
+/* the searching input and search icon */
+.searching{
+    min-width: 350px;
+    height: 31px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    .sq-search{
+        position: relative;
+        .sq-search-input{
+            width: 270px;
+            height: 31px;
+            border: none;
+            border-bottom: 1px solid #000000;
+            outline: none;
+        }
+    }
+    .sq-search-input:focus{
+        border-bottom: 2px solid #000000;
+    }
+    .search-icon{
+        position: absolute;
+        top: 1.67px;
+        right: 1.67px;
+        cursor: pointer;
+    }
+    .grid-icon{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* grid تنسيقات الكروت يلي ساويتها بال  */
+main .cources-page, main .all-articles{
+    margin: 56px 70px 0px;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        grid-template-rows: repeat(2 , max-content);
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        gap: 35px;
+    }
+}
+
+.container .card .photography{
+    width: 114px;
+    height: 40px;
+    padding: 8px 12px;
+    font-weight: 500;
+    color: white;
+    background-color: #000000;
+    border-radius: 8px;
+    font-family: "Jost", serif;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    .position{
+        font-weight: 500;
+    }
+}
+
+/* courses التنقلات بين صفحات ال  */
+.pages{
+    padding: 70px 70px;
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        list-style: none;
+        li{
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            padding: 10px 0;
+            border: 1px solid #EAEAEA;
+            border-radius: 24px;
+            a{
+                font-family: "Jost", serif;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+        li:hover{
+            background-color: #000000;
+            border: none;
+            a{
+                color: white;
+            }
+        }
+    }
+}
+
+/* login,contact تنسيق تسجيل الدخول بصفحة ال  */
+.input-info{
+    height: 48px;
+    padding: 10.5px 16px;
+    border-radius: 8px;
+    border: 1px solid #9D9D9D;
+}
+
+/* label تنسيق ال */
+.check{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+footer{
+    background-color: #F5F5F5;
+    text-align: center;
+    .container{
+        padding: 50px 70px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        gap: 30.2px;
+        .lorem{
+            max-width: 412.69px;
+            .writings{
+                padding-top: 32px;
+            }
+        }
+        .help{
+            min-width: 191.25px;
+            ul{
+                max-width: 121px;
+                height: 135px;
+                line-height: 34px;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                li{
+                    font-weight: 500;
+                    a{
+                        text-decoration: none;
+                    }
+                    a:hover{
+                        color: #FF782D;
+                    }
+                }
+            }
+        }
+        .programs{
+            min-width: 191.25px;
+            ul{
+                max-width: 191.25px;
+                height: 225px;
+                font-weight: 500;
+                line-height: 34px;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                li{
+                font-weight: 500;
+                    a{
+                        text-decoration: none;
+                    }
+                    a:hover{
+                        color: #FF782D;
+                    }
+                }
+            }
+        }
+        .contact{
+            max-width: 340.22px;
+            personal-info{
+                font-weight: 400;
+            }
+            .sec-p{
+                padding: 16px 0;
+            }
+            .social-icons{
+                width: 148px;
+                display: flex;
+                gap: 12px;
+                justify-content: space-between;
+                font-size: 18px;
+            }
+            .sm-icons:hover{
+                color: #FF782D;
+            }
+        }
+    }
+    h4{
+        padding-bottom: 32px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .footer-end{
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width : 992px){
+    nav {
+        padding: 20px 30px;
+    }
+    nav ul, nav .login {
+        display: none;
+    }
+    nav .menu {
+        display: block;
+    }
+
+    .intro{
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    header .guide{
+        padding: 18px 20px;
+    }
+
+    .courses{
+        text-align: center;
+        margin: 70px 21px;
+        .container{
+            flex-direction: column;
+            .card {
+                max-width: 320px;
+                .describtion{
+                    max-width: 280px;
+                    text-align: left;
+                }
+            }
+        }
+        button{
+            margin-top: 35px;
+        }
+    }
+
+    main .cources-page, main .all-articles{
+        margin: 0 20px;
+        .intro{
+            min-width: 320px;
+            height: 101px;
+            margin: 56px 0px 50px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+        }
+        .searching{
+            max-width: 320px;
+            min-width: 0;
+            .sq-search{
+                width: 239px;
+                .sq-search-input{
+                    width: 239px;
+                }
+            }
+        }
+        .container{
+            grid-template-columns: minmax(385px , 320px);
+            .card{
+                max-width: 320px;
+            }
+        }
+    }
+    .pages{
+        padding: 70px 32px 70px 40px;
+    }
+
+    footer{
+        flex-direction: column;
+        .container{
+            max-width: 340.22px;
+            flex-direction: column;
+            padding: 70px 20px 38px;
+            .contact{
+                min-width: 0px;
+            }
+        }
+        .footer-end{
+            padding: 0 20px 39px;
+        }
+    }
+}

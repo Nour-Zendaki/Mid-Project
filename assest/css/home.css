@@ -1,0 +1,301 @@
+.hero {
+    height: calc(100vh - 72px);
+    padding: 0 70px;
+    background-image: url("./../img/backgroud.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    h1 {
+        max-width: 520px;
+        font-size: 48px;
+        font-weight: 600;
+    }
+    p {
+        max-width: 520px;
+        padding: 24px 0 20px;
+    }
+}
+
+/*  grid القسم يلي حنستخدم فيه ال  */
+.top-categories {
+    margin: 56px 70px 70px;
+    button{
+        border: 2px solid #9D9D9D;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4 , 234px);
+        grid-template-rows: repeat(2 , 234px);
+        justify-content: center;
+        align-content: center;
+        padding-top: 16px;
+        gap: 31px;
+        .categories {
+            border: 1px solid #EAEAEA;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .icon{
+                height: 32px;
+            }
+            h4 {
+                padding: 24px 0 12px;
+            }
+        }
+        .categories:hover {
+            box-shadow: 0 4px 8px #0000001A;
+            transform: translateY(-16px);
+            transition: 0.3s all 0.1s ease-in-out;
+            h4 {
+                color: #FF782D;
+            }
+        }
+    }
+}
+
+/* القسم يلي فيه الكروت لحتى نتوسع و نبحث عن الكورسات */
+.courses {
+    margin: 70px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 35px;
+        .card{
+            max-width: max-content;
+            position: relative;
+        }
+    }
+    button{
+        border: 2px solid #9D9D9D;
+    }
+}
+
+/* learnpress إضافات لل */
+.l-p-add-ons{
+    background-image: url("./../img/banner1.png");
+    .container{
+        max-width: 490px;
+        padding: 54.5px 0 54.5px 50px;
+        h2{
+            padding: 12px 0 24px;
+        }
+        p{
+            font-weight: 400;
+            padding-bottom: 20px;
+            font-size: 16px;
+        }
+    }
+}
+
+/*.... قسم المعلومات عن الشركة كم طالب متابع عندها و قديش الكورسات */
+.information{
+    margin: 0 70px 70px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    .info{
+        width: 284px;
+        height: 161px;
+        background-color: #F5F5F5;
+        .popular{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 11.5px;
+            h2{
+                color: #FF782D;
+            }
+            a{
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+/* قسم تنمية المواهب */
+.grow-skills{
+    margin: 0 70px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    .library-bg{
+        max-width: 537px;
+    }
+    .exploring{
+        max-width: 520px;
+        margin: 42.5px 44px 42.5px 0;
+        .denounce{
+            padding: 24px 0 16px;
+        }
+        .certification{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            svg{
+                color: #55BE24;
+            }
+        }
+        .bottom-crft{
+            margin-bottom: 20px;
+        }
+    }
+}
+/* قسم التسجيل كمدرب */
+.academy{
+    padding: 65px 18px;
+    background-image: url("./../img/banner2.png");
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .statement{
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            .apply-icon{
+                width: 120px;
+                height: 120px;
+                background-color: white;
+                border-radius: 50%;
+                position: relative;
+                .graduated-std{
+                    position: absolute;
+                    top: 24px;
+                    left: 29.42px;
+                }
+                h4{
+                    font-size: 20px;
+                }
+            }
+        }
+        .two-btns{
+            display: flex;
+            gap: 20px;
+            .primary-btn{
+                border: 2px solid #FF782D;
+                background: none;
+                color: #FF782D;
+            }
+            .secondary-btn{
+                width: 219px;
+            }
+        }
+    }
+}
+
+.btn-cat {
+    background: none;
+    border: 2px solid #9D9D9D;
+}
+
+.hidden-btn {
+    text-align: center;
+    display: none;
+}
+
+.coord-bg{
+    margin: 0 70px 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@media screen  and (max-width : 992px){
+    .hero {
+        padding: 115px 10px 116px;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(97.77deg, #FFF5BE 0%, #D0F7EA 97.73%);
+    }
+    .hero h1 {
+        max-width: 320px;
+        font-size: 32px;
+    }
+    .top-categories{
+        text-align: center;
+        margin: 56px 20px 70px;
+        .container {
+            grid-template-columns: minmax(234px , 234px);
+            grid-auto-rows: minmax(234px, 234px);
+        }
+        button{
+            margin-top: 25px;
+            border: 2px solid #9D9D9D;
+        }
+    }
+    .l-p-add-ons{
+        padding: 79px 20px;
+        margin: 0;
+        text-align: center;
+        background: linear-gradient(103.63deg, #B5FFE7 1.83%, #FDC1C1 98.92%);
+        border-radius: 0;
+        .container{
+            padding: 0;
+            margin: 0 auto;
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    .information {
+        flex-direction: column;
+        margin: 70px 38px 70px 38px;
+        .popular{
+            gap: 16px;
+        }
+    }
+    .grow-skills{
+        margin: 0 20px 70px 20px;
+        flex-direction: column-reverse;
+        gap: 24px;
+        .library-bg{
+            max-width: 300px;
+        }
+        .exploring{
+            margin: 0;
+        }
+    }
+    .academy{
+        padding: 74px 20px;
+        margin: 0;
+        text-align: center;
+        border-radius: 0;
+        /*نفس الكلاس لانهم بياخدوا نفس الخاصية statement و ال two-btn و ال container عطيت ال */
+        .direction{
+            flex-direction: column;
+        }
+        .container{
+            gap: 24px;
+            .statement {
+                gap: 16px;
+                .apply-icon{
+                    max-width: 80px;
+                    max-height: 80px;
+                    .graduated-std{
+                        width: 38.16px;
+                        height: 44.92px;
+                        top: 17.54px;
+                        left: 20.92px;
+                    }
+                }
+            }
+        }
+    }
+    .visible-btn {
+        display: none;
+    }
+    .hidden-btn{
+        display: block;
+    }
+    
+}
