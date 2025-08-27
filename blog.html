@@ -16,21 +16,24 @@
 <body>
     <header>
         <nav>
-            <img src="./assest/img/LOGO.png" alt="EduPress logo">
-            <ul>
-                <li><a class="list coordination-a" href="./index.html">Home</a></li>
-                <li><a class="list coordination-a" href="./cources.html">Cources</a></li>
-                <li><a class="list coordination-a" href="./blog.html">Blog</a></li>
-                <li><div class="page">
-                    <a class="list coordination-a" href="#">Page<i class="fa-solid fa-angle-down fa-xs"></i></a>
-                </div></li>
-                <li><a class="list coordination-a" href="#">Premium Theme</a></li>
+            <img class="logo" src="./assest/img/LOGO.png" alt="EduPress logo">
+            <ul class="navLinks">
+                <li class="list-element"><a class="list coordination-a" href="./index.html">Home</a></li>
+                <li class="list-element"><a class="list coordination-a" href="./cources.html">Cources</a></li>
+                <li class="list-element"><a class="list coordination-a" href="./blog.html">Blog</a></li>
+                <li class="list-element">
+                    <div class="page">
+                    <a class="list coordination-a" href="#">Page<i class="fa-solid fa-angle-down fa-xs angle-down"></i></a>
+                    </div>
+                </li>
+                <li class="list-element"><a class="list coordination-a" href="#">Premium Theme</a></li>
+                <li class="list-element"><a class="list coordination-a" href="./login-register.html">Login / Register</a></li>
             </ul>
-            <div class="login">
-                <a class="list coordination-a" href="./login-register.html">Login / Register</a>
-                <a class="coordination-a" href="#"><img src="./assest/img/Search icon.svg" alt="search icon"></a>
+            <div class="sideMenu">
+                <a class="coordination-a search" href="#"><img class="searchingIcon" src="./assest/img/Search icon.svg" alt="search icon"></a>
+                <button class="menu openMenu" type="menu"><i class="fa-solid fa-bars icon sideMenuIcon"></i></button>
+                <button class="menu closeMenu" type="menu"><i class="fa-solid fa-xmark closeMenuIcon"></i></button>
             </div>
-            <button class="menu" type="menu"><i class="fa-solid fa-bars icon"></i></button>
         </nav>
         <div class="guide">
             <p class="text color">Homepage <span><i class="fa-solid fa-angle-right fa-2xs"></i>Blog</span></p>

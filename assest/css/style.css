@@ -12,17 +12,17 @@ nav {
     justify-content: space-between;
     align-items: center;
     ul{
-        width: 512px;
+        width: 72%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         list-style: none;
     }
     .list{
-        padding: 26.5px 19px;
+        padding: 26.5px 34px;
         font-weight: 600;
     }
-    .list:active, svg:active{
+    .list:active, .list:hover{
         background-color: #F5F5F5;
         color: #FF782D;
     }
@@ -31,16 +31,25 @@ nav {
             padding-left: 8px;
         }
     }
-    .login{
-        display: flex;
-        align-items: center;
-    }
-    .menu {
-        background: none;
-        border: none;
-        font-size:larger;
-        display: none;
-        .icon{
+    .sideMenu{
+        .search{
+            display: block;
+        }
+        .menu {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            background: none;
+            border: none;
+            font-size:larger;
+            .icon{
+                color: #000000;
+            }
+        }
+        .menu:hover{
+            background-color: #9d9d9d57;
             color: #000000;
         }
     }
@@ -104,17 +113,16 @@ nav {
     border-top-right-radius: 20px;
 }
 
-.coordination-a{
+.coordination-a, .slider-elem{
     text-decoration: none;
     color: black;
 }
 
 .card{
-    max-width: 385px;
+    width: 100%;
     border: 1px solid #EAEAEA;
     position: relative;
     .describtion {
-        max-width: 345px;
         margin: 20px;
         p{
             font-weight: 500;
@@ -182,6 +190,7 @@ header .guide{
     height: 31px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
     .sq-search{
         position: relative;
@@ -200,12 +209,16 @@ header .guide{
         position: absolute;
         top: 1.67px;
         right: 1.67px;
-        cursor: pointer;
     }
     .grid-icon{
         width: 20px;
         height: 20px;
     }
+}
+
+/* cursor pointer*/
+.cursor{
+    cursor: pointer;
 }
 
 /* grid تنسيقات الكروت يلي ساويتها بال  */
@@ -240,36 +253,77 @@ main .cources-page, main .all-articles{
 }
 
 /* courses التنقلات بين صفحات ال  */
-.pages{
-    padding: 70px 70px;
-    ul{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-        list-style: none;
-        li{
+.slider-container{
+    width: 288px;
+    margin: 70px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    .slider-btn{
             width: 48px;
             height: 48px;
             text-align: center;
             padding: 10px 0;
             border: 1px solid #EAEAEA;
             border-radius: 24px;
+            cursor: pointer;
+            transition: 0.5s all ;
+            background-color: white;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 10;
+    }
+    .slider-btn:hover{
+    background-color: #000000;
+    border: none;
+    color: white;
+    .coordination-a{
+        color: white;
+    }
+    }
+    .slider-mask{
+        width: 168px;
+        overflow: hidden;
+    }
+    .slider{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        list-style: none;
+        position: relative;
+        transition: 0.5s all ease;
+        .slider-elem{
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            padding: 10px 0;
+            border: 1px solid #EAEAEA;
+            border-radius: 24px;
+            cursor: pointer;
+            flex-shrink: 0;
+            z-index: 10;
+            
             a{
                 font-family: "Jost", serif;
                 font-size: 18px;
                 font-weight: 500;
+                line-height: 28px;
             }
         }
-        li:hover{
+        .slides:hover{
             background-color: #000000;
             border: none;
+            color: white;
             a{
                 color: white;
             }
         }
     }
 }
+
 
 /* login,contact تنسيق تسجيل الدخول بصفحة ال  */
 .input-info{
@@ -377,13 +431,61 @@ footer{
 @media screen and (max-width : 992px){
     nav {
         padding: 20px 30px;
+        .logo{
+            width: 150px;
+        }
+        .navLinks {
+            position: fixed;
+            top: 65px;
+            right: 55px;
+            background: #6d6c6c6e;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            transition: all 0.4s ease;
+            display: none;
+        }
+        .navLinks.active{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .list{
+            padding: 20px;
+        }
+        .list:active, .list:hover{
+            background: none;
+        }
+        .list-element{
+            padding: 20px;
+            text-align: center;
+        }
+        .login{
+            display: none;
+        }
+        .sideMenu{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            z-index: 10;
+            .searchingIcon{
+                width: 30px;
+            }
+        .openMenu{
+            display: block;
+        }
+        .openMenu.active{
+            display: none;
+        }
+        .closeMenu{
+            display: none;
+        }
+        .closeMenu.active{
+            display: block;
+        }
     }
-    nav ul, nav .login {
-        display: none;
-    }
-    nav .menu {
-        display: block;
-    }
+}
 
     .intro{
         justify-content: center;
@@ -400,9 +502,7 @@ footer{
         .container{
             flex-direction: column;
             .card {
-                max-width: 320px;
                 .describtion{
-                    max-width: 280px;
                     text-align: left;
                 }
             }
@@ -433,14 +533,8 @@ footer{
             }
         }
         .container{
-            grid-template-columns: minmax(385px , 320px);
-            .card{
-                max-width: 320px;
-            }
+            grid-template-columns: 1fr;
         }
-    }
-    .pages{
-        padding: 70px 32px 70px 40px;
     }
 
     footer{

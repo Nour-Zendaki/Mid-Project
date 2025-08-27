@@ -16,21 +16,24 @@
 <body>
     <header>
         <nav>
-            <img src="./assest/img/LOGO.png" alt="EduPress logo">
-            <ul>
-                <li><a class="list coordination-a" href="./index.html">Home</a></li>
-                <li><a class="list coordination-a" href="./cources.html">Cources</a></li>
-                <li><a class="list coordination-a" href="./blog.html">Blog</a></li>
-                <li><div class="page">
-                    <a class="list coordination-a" href="#">Page<i class="fa-solid fa-angle-down fa-xs"></i></a>
-                </div></li>
-                <li><a class="list coordination-a" href="#">Premium Theme</a></li>
+            <img class="logo" src="./assest/img/LOGO.png" alt="EduPress logo">
+            <ul class="navLinks">
+                <li class="list-element"><a class="list coordination-a" href="./index.html">Home</a></li>
+                <li class="list-element"><a class="list coordination-a" href="./cources.html">Cources</a></li>
+                <li class="list-element"><a class="list coordination-a" href="./blog.html">Blog</a></li>
+                <li class="list-element">
+                    <div class="page">
+                    <a class="list coordination-a" href="#">Page<i class="fa-solid fa-angle-down fa-xs angle-down"></i></a>
+                    </div>
+                </li>
+                <li class="list-element"><a class="list coordination-a" href="#">Premium Theme</a></li>
+                <li class="list-element"><a class="list coordination-a" href="./login-register.html">Login / Register</a></li>
             </ul>
-            <div class="login">
-                <a class="list coordination-a" href="./login-register.html">Login / Register</a>
-                <a class="coordination-a" href="#"><img src="./assest/img/Search icon.svg" alt="search icon"></a>
+            <div class="sideMenu">
+                <a class="coordination-a search" href="#"><img class="searchingIcon" src="./assest/img/Search icon.svg" alt="search icon"></a>
+                <button class="menu openMenu" type="menu"><i class="fa-solid fa-bars icon sideMenuIcon"></i></button>
+                <button class="menu closeMenu" type="menu"><i class="fa-solid fa-xmark closeMenuIcon"></i></button>
             </div>
-            <button class="menu" type="menu"><i class="fa-solid fa-bars icon"></i></button>
         </nav>
         <div class="guide">
             <p class="text color">Homepage <span><i class="fa-solid fa-angle-right fa-2xs"></i>Course</span></p>
@@ -45,10 +48,10 @@
                 <div class="searching">
                     <form action="" class="sq-search">
                         <input type="search" name="searching" placeholder="Search" class="sq-search-input">
-                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <i class="fa-solid fa-magnifying-glass search-icon cursor"></i>
                     </form>
-                    <img class="grid-icon" src="./assest/img/grid-icon.svg" alt="grid-icon">
-                    <i class="fa-solid fa-list"></i>
+                    <img class="grid-icon cursor" src="./assest/img/grid-icon.svg" alt="grid-icon">
+                    <i class="fa-solid fa-list cursor"></i>
                 </div>
             </div>
             <div class="container">
@@ -210,14 +213,23 @@
                 </div>
             </div>
         </section>
-        <div class="pages">
-            <ul>
-                <li><a class="coordination-a" href="./cources.html"><i class="fa-solid fa-angle-left fa-xs"></i></i></a></li>
-                <li><a class="coordination-a" href="./cources.html">1</a></li>
-                <li><a class="coordination-a" href="#">2</a></li>
-                <li><a class="coordination-a" href="#">3</a></li>
-                <li><a class="coordination-a" href="#"><i class="fa-solid fa-angle-right fa-xs"></i></i></a></li>
-            </ul>
+        <div class="slider-container">
+            <button class="slider-elem slider-btn" id="left"><i class="fa-solid fa-angle-left fa-xs coordination-a"></i></button>
+            <div class="slider-mask">
+                <ul class="pages slider">
+                    <li class="slider-elem slides"><a class="coordination-a" href="./cources.html">1</a></li>
+                    <li class="slider-elem slides"><a class="coordination-a" href="#">2</a></li>
+                    <li class="slider-elem slides"><a class="coordination-a" href="#">3</a></li>
+                    <li class="slider-elem slides"><a class="coordination-a" href="#">4</a></li>
+                    <li class="slider-elem slides"><a class="coordination-a" href="#">5</a></li>
+                    <li class="slider-elem slides"><a class="coordination-a" href="#">6</a></li>
+                    <li class="slider-elem slides"><a class="coordination-a" href="#">7</a></li>
+                    <li class="slider-elem slides"><a class="coordination-a" href="#">8</a></li>
+                    <li class="slider-elem slides"><a class="coordination-a" href="#">9</a></li>
+                    <li class="slider-elem slides"><a class="coordination-a" href="#">10</a></li>
+                </ul>
+            </div>
+            <button class="slider-elem slider-btn" id="right"><i class="fa-solid fa-angle-right fa-xs coordination-a"></i></button>
         </div>
     </main>
     <footer>
@@ -259,5 +271,5 @@
         </div>
         <p class="text color footer-end">Copyright © 2024 LearnPress LMS | Powered by ThimPress</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+    <script src="./assest/js/script.js"></script>
 </body>
