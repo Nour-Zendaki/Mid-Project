@@ -11,7 +11,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    ul{
+    .navLinks{
         width: 72%;
         display: flex;
         justify-content: space-between;
@@ -22,14 +22,57 @@ nav {
         padding: 26.5px 34px;
         font-weight: 600;
     }
+    .list.showpage{
+        color: #FF782D;
+    }
     .list:active, .list:hover{
         background-color: #F5F5F5;
         color: #FF782D;
     }
-    .page {
-        svg, i{
-            padding-left: 8px;
+    .pages{
+        padding: 25px;
+        font-weight: 600;
+        position: relative;
+        transition: all 0.5s ease;
+        .listTitle{
+            padding: 10px;
         }
+        .arrowdown.rotate{
+            transform: rotate(180deg);
+        }
+        .anypage{
+            width: 165px;
+            background-color: #9d9d9d57;
+            list-style: none;
+            position: absolute;
+            top: 85px;
+            left: 30px;
+            display: none;
+            z-index: 10;
+            .page{
+                display: flex;
+                padding: 20px 30px;
+                color: black;
+                transition: all 0.5s ease;
+            }
+            .page:hover, .page:active, .anypage:hover, .anypage:active{
+                color: #FF782D;
+            }
+        }
+        .anypage.show{
+            display: block;
+            transition: all 1s ease;
+        }
+    }
+    .navSearch.searching{
+        min-width: 188px;
+        display: none;
+        .sq-search-input{
+            width: 100%;
+        }
+    }
+    .navSearch.searchrow{
+        display: block;
     }
     .sideMenu{
         .search{
@@ -435,11 +478,11 @@ footer{
             width: 150px;
         }
         .navLinks {
-            position: fixed;
+            padding: 20px;
+            position: absolute;
             top: 65px;
             right: 55px;
             background: #6d6c6c6e;
-            padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 10;
             transition: all 0.4s ease;
@@ -459,6 +502,14 @@ footer{
         .list-element{
             padding: 20px;
             text-align: center;
+        }
+        .pages{
+            padding: 0;
+            .anypage{
+                top: 60px;
+                left: 7px;
+                background-color: #ffffff85;
+            }
         }
         .login{
             display: none;
